@@ -6,11 +6,15 @@
     <title>my portfolio</title>
 </head>
 <body>
+<header>
     <h1>Welcome to Portfolio</h1>
-    <button>About</button>
-    <button>Skills</button>
-    <button>Projects</button>
-    <button>Contact</button>
+     <a href=""><button>About</button></a>
+     <a href=""><button>Skills</button></a>
+     <a href=""><button>Projects</button></a>
+     <a href=""><button>Contact</button></a>
+</header>
+<main>
+<section id="About">
     <h1>Sai Prasad</h1>
     <br>
     <img height="315" width="315" src="Untitled design.png" alt="A Photo of Me">
@@ -23,13 +27,16 @@
         <br>
         <a href=""> you can <strong> click here</strong> to checkout what i have learnt in HTML</a>
     </p> 
-<hr>
-<h1> My skills</h1>
-<ol style="text-align: left; font-size: 20px;">
-    <li>html</li>
-    <li>python</li>
-</ol>
-<body>
+    <hr>
+</section>
+<section id="My skills">
+    <h1> My skills</h1>
+    <ol style="text-align: left; font-size: 20px;">
+        <li>html</li>
+        <li>python</li>
+    </ol>
+</section>
+<section id="My Projects">
     <h1>My Projects</h1>
     <table border="1">
         <tr>
@@ -45,6 +52,8 @@
             <td>I have built a simple calculator in the course by Code With Swaroop</td>
         </tr>
     </table>
+</section>
+<section id="Contact Me">
     <h1>Contact Me</h1>
     <p>Feel free to get in touch with me using the form below:</p>
     <form>
@@ -71,8 +80,12 @@
        <br>
        <button type="submit">submit</button>
        <button type="reset">reset</button>
-       <br>
-       <label>© 2025 My Portfolio</label>
     </form>
+</section>
+</main>
+<footer>
+    <br>
+    <label>© 2025 My Portfolio</label>
+</footer>
 </body>
 </html>
