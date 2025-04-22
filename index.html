@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
     <title>my portfolio</title>
+    <style>
+        body{background-color: aqua;}
+        .saiprasad{color: blue;}
+        .heading{color:red;}
+        button{background-color:palegreen}
+        .section{color: chartreuse;}
+        table{background-color: blueviolet;} 
+    </style>
 </head>
 <body>
 <header>
-    <h1>Welcome to my Portfolio</h1>
+    <h1 class="heading">Welcome to my Portfolio</h1>
      <a href=""><button>About</button></a>
      <a href=""><button>Skills</button></a>
      <a href=""><button>Projects</button></a>
@@ -15,7 +21,7 @@
 </header>
 <main>
 <section id="About">
-    <h1>Sai Prasad</h1>
+    <h1 class="saiprasad"> Sai Prasad</h1>
     <br>
     <img height="315" width="315" src="saiprasad.jpg" alt="A Photo of Me">
     <br>
@@ -29,14 +35,14 @@
     </p> 
     <hr>
 </section>
-<section id="My skills">
+<section class="section" id="My skills">
     <h1> My skills</h1>
     <ol style="text-align: left; font-size: 20px;">
         <li>html</li>
         <li>python</li>
     </ol>
 </section>
-<section id="My Projects">
+<section class="myprojects" id="My Projects">
     <h1>My Projects</h1>
     <table border="1">
         <tr>
