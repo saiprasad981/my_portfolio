@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-    <title>my portfolio</title>
+    <title>my portfolio</title> 
     <style>
         body{background-image: url(https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-4-1536x1024.jpg);}
-        button{background-color:palegreen}
-        .section{color: chartreuse;}
-        table{background-color: blueviolet;
-        }
+        .h1{text-align: center; color: red;}
+        .b1{background-color:pink;}
+        .p1{color: yellow;}
+        .h3{color:chartreuse;}
+        .t1{background-color:deepskyblue;} 
+        .l1{color: rgb(15, 7, 240);}
         *{color: white;}
     </style>
 </head>
 <body>
 <header>
-    <h1 class="heading">Welcome to my Portfolio</h1>
-     <a href=""><button>About</button></a>
-     <a href=""><button>Skills</button></a>
-     <a href=""><button>Projects</button></a>
-     <a href=""><button>Contact</button></a>
+    <h1 class="h1">welcome to my portfolio</h1>
+    <a href=""><button class="b1">About</button></a>
+    <a href=""><button class="b1">Skills</button></a>
+    <a href=""><button class="b1">Projects</button></a> 
+    <a href=""><button class="b1">Contact</button></a>
 </header>
 <main>
-<section id="About">
-    <h1 id="id" class="saiprasad"> Sai Prasad</h1>
+    <span><h3 class="p1">Sai Prasad</h3></span>
+    <img height="315" width="315" src="saiprasad.jpg" alt="a photo of me">
+    <p>I am passionate about web development with a focus on <strong>front-end technologies</strong><br>
     <br>
-    <img height="315" width="315" src="saiprasad.jpg" alt="A Photo of Me">
-    <br>
-    <p>I am passionate about web development with a focus on <strong> front-end technologies</strong> <br>
-        <br>
-        iam currently pursuing my btech in<strong> <em>NRI institute of technology ,</em>  agiripalli </strong><br>
-        <br>
-          i have learning web development from code with swaroop   <br>
-        <br>
-        <a href=""> you can <strong> click here</strong> to checkout what i have learnt in HTML</a>
+        iam currently pursuing my btech in <strong><em>NRI institute of technology , agiripalli</em></strong>
     </p> 
+    <p>i have learning web development from code with swaroop</p>
+    <p>you can <a href=""><strong>click here</strong></a> to checkout what i have learnt in HTML</p>
     <hr>
-</section>
-<section class="section" id="My skills">
-    <h1> My skills</h1>
-    <ol style="text-align: left; font-size: 20px;">
-        <li>html</li>
+    <h1 class="h3">My Skills</h1>
+    <ul>
         <li>python</li>
-    </ol>
-</section>
-<section class="myprojects" id="My Projects">
-    <h1>My Projects</h1>
-    <table border="1">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <h1 class="h3">My Projects</h1>
+    <table class="t1" border="1">
         <tr>
             <th>Projects</th>
             <th>Description</th>
-        </tr> 
+        </tr>
         <tr>
             <td>Portfolio Website</td>
-            <td>I Just Built My Portfolio Website Using HTML</td>
+            <td>I Just Built My Portfolio Website Using HTML and CSS</td>
         </tr>
         <tr>
             <td>Python Calculator</td>
             <td>I have built a simple calculator in the course by Code With Swaroop</td>
         </tr>
+        <tr>
+            <td>AI AGENT</td>
+            <td>I Just Built my Own AI AGENT </td>
+        </tr>
     </table>
-</section>
-<section id="Contact Me">
-    <h1>Contact Me</h1>
-    <p>Feel free to get in touch with me using the form below:</p>
-    <form>
-       <label>Name:</label>
-       <input type="text">
-       <br>
-       <label>Email:</label>
-       <input type="email">
-       <br>
-       <label>Choose Your Gender:</label>
-       <input type="radio">
-       <label>Male</label>
-       <input type="radio">
-       <label>Female</label> 
-       <br>
-       <label>Choose Your Interests:</label>  
-       <input type="checkbox">
-       <label>Coding</label> 
-       <input type="checkbox">
-       <label>Reading</label> 
-       <br>
-       <label>Bio (upto 200 characters):</label>
-       <input type="text" maxlength="200">
-       <br>
-       <button type="submit">submit</button>
-       <button type="reset">reset</button>
-    </form>
-</section>
-</main>
-<footer>
+    <h1 class="h3">Contact Me</h1>
+    <p>Feel free to get in touch with me using the form below:</p> 
+<form action="">
+    <label for="f1">Name:</label>
+    <input id="f1" type="text">
     <br>
-    <label>© 2025 My Portfolio</label>
+    <label for="f2">Email:</label>
+    <input type="email" id="f2">
+    <br>
+    <label for="">Choose Your Gender:</label>
+    <input type="radio">
+    <label for="">Male</label>
+    <input type="radio">
+    <label for="">Female</label>
+    <br>
+    <label for="">Choose Your Interests:</label>
+    <input type="checkbox">
+    <label for="">Coding</label>
+    <input type="checkbox">
+    <label for="">Reading</label>
+    <br>
+    <label for="bio">Bio (upto 200 characters):</label>
+    <br>
+    <textarea class="l1" id="bio" rows="8" cols="38" placeholder="type something here"></textarea>
+    <br>
+    <br>
+    <button class="b1" type="submit">Submit</button> 
+    <button class="b1" type="reset">Reset</button>
+</form>
+</main>
+<footer> 
+<br>
+<label>© 2025 My Portfolio</label>
+<br>
 </footer>
 </body>
 </html>
