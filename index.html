@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my portfolio</title> 
     <style>
-       *{font-family: monospace;}
-       body{
-        background-color: #f0f8ff;
-        margin: 0px;
-        font-size: 15px;
-        text-align: center;
-       }
-       header{
-        height: 100vh;
-        color: white;
-        background-color:aqua;
-       }
-       header h1{margin: 0px; color: white;}
-       h1{
-        color: blue;
-        font-size:50px;
+        *{
+            font-family: monospace;
         }
-       .b1{
-        height: 40px;
-        width: 140px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-       }
-       .b1:hover{
-    color: white;
-    background-color: darkblue;
-       }
-       img{
-        height: 200px;
-       }
-       main{
-        padding: 20px;
-       }
-       section{
-        height: 100vh;
-        border: 1px solid grey;
-        border-radius: 20px;
-        margin-bottom: 20px;
-       }
-       .b2:hover{
-    color: white;
-    background-color: greenyellow;
-       }
-       .b2{
-        height: 40px;
-        width: 140px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-       }
-       input{
-        border-radius: 5px;
-        border: 1px solid lightgray;
-        height: 25px;
-       }
-       footer{
-        height: 124px;
-        background-color: black;
-        color: lightgray;
-       }
-       .b3{
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        height: 70px;
-        width: 70px;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        color: white;
-        background-color:#2196F3;
-       }
+        body{
+            margin: 0;
+            font-size: 15px;
+            background-color: #f0f8ff;
+        }
+        header{
+            height: 100vh;
+            color: white;
+            background-color: #2196F3;
+        }
+        h1{
+            font-size: 50px;
+            color: #2196F3;
+        }
+        header h1{
+            color: white;
+            margin: 0;
+        }
+        .button{
+            height:  40px;
+            width: 140px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button:hover{
+            color: white;
+            background-color: darkblue;
+        }
+        img{
+            height: 200px;
+        }
+        main{
+            padding: 20px;
+        }
+        section{
+            height: 100vh;
+            border: 1px solid grey;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .submit{
+            height:  40px;
+            width: 140px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            background-color: #2196F3;
+        }
+        .submit:hover{
+            color: black;
+            background-color: #055ca3;
+        }
+        input{
+             border-radius: 5px;
+             border: 1px solid lightgray;
+             height: 25px;
+        }
+        .fixedbutton{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            height: 70px;
+            width: 70px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            background-color: #2196F3;
+        }
+        footer{
+            height: 124px;
+            background-color: black;
+            color: lightgrey;
+        }
     </style>
 </head>
 <body>
 <header>
     <section>
     <h1>welcome to my portfolio</h1>
-    <a href=""><button class="b1">About</button></a>
-    <a href=""><button class="b1">Skills</button></a>
-    <a href=""><button class="b1">Projects</button></a> 
-    <a href=""><button class="b1">Contact</button></a>
+    <a href=""><button class="button">About</button></a>
+    <a href=""><button class="button">Skills</button></a>
+    <a href=""><button class="button">Projects</button></a> 
+    <a href=""><button class="button">Contact</button></a>
     </section>
 </header>
 <main>
@@ -134,7 +140,6 @@
     <label for="f1">Name:</label>
     <input id="f1" type="text">
     <br>
-    <br>
     <label for="f2">Email:</label>
     <input type="email" id="f2">
     <br>
@@ -154,22 +159,16 @@
     <br>
     <textarea id="bio" rows="8" cols="38" placeholder="type something here"></textarea>
     <br>
-    <br>
-    <button class="b2" type="submit">Submit</button> 
-    <button class="b2" type="reset">Reset</button>
+    <button class="submit" type="submit">Submit</button> 
+    <button class="submit" type="reset">Reset</button>
 </form>
 </section>
 </main>
-<br>
-<br>
-<br>
-<br>
-
+<button class="fixedbutton">Top</button>
 <footer> 
 <br>
 <label>© 2025 My Portfolio</label>
-<br>
-<button class="b3" type="submit">TOP</button> 
+<br> 
 </footer>
 </body>
 </html>
