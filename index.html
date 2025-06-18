@@ -16,16 +16,22 @@
             height: 100vh;
             color: white;
             background-color: #2196F3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
         h1{
             font-size: 50px;
             color: #2196F3;
         }
         header h1{
+            text-align: center;
             color: white;
-            margin: 0;
         }
         .button{
+            margin: 15px;
             height:  40px;
             width: 140px;
             border: none;
@@ -46,7 +52,17 @@
             height: 100vh;
             border: 1px solid grey;
             border-radius: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 20px;display: flex;
+            padding: 7px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        form div{
+            margin: 5px 0;
         }
         .submit{
             height:  40px;
@@ -81,30 +97,35 @@
         footer{
             height: 124px;
             background-color: black;
-            color: lightgrey;
+            color: lightgrey;display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
 <header>
     <section>
+        <div>
     <h1>welcome to my portfolio</h1>
-    <a href=""><button class="button">About</button></a>
-    <a href=""><button class="button">Skills</button></a>
-    <a href=""><button class="button">Projects</button></a> 
-    <a href=""><button class="button">Contact</button></a>
+    <a href="#about"><button class="button">About</button></a>
+    <a href="#skills"><button class="button">Skills</button></a>
+    <a href="#projects"><button class="button">Projects</button></a> 
+    <a href="#contact"><button class="button">Contact</button></a>
+        </div>
     </section>
 </header>
 <main>
-    <section>
+    <section id="about">
     <h1>Sai Prasad</h1>
     <img src="saiprasad.jpg" alt="a photo of me">
     <p>I am passionate about web development with a focus on <strong>front-end technologies</strong><br>
     <br>iam currently pursuing my btech in <strong><em>NRI institute of technology,agiripalli</em></strong></p> 
     <p>i have learning web development from code with swaroop</p>
-    <p>you can <a href=""><strong>click here</strong></a> to checkout what i have learnt in HTML</p>
+    <p>you can <a href="#projects"><strong>click here</strong></a> to checkout what i have learnt in HTML</p>
     </section>
-    <section>
+    <section id="skills">
     <h1>My Skills</h1>
     <ul>
         <li>python</li>
@@ -112,7 +133,7 @@
         <li>CSS</li>
     </ul>
     </section>
-    <section>
+    <section id="projects">
     <h1>My Projects</h1>
     <table cellpadding="5" cellspacig="3" border="1">
         <tr>
@@ -133,38 +154,51 @@
         </tr>
     </table>
     </section>
-    <section>
+    <section id="contact">
     <h1>Contact Me</h1>
     <p style="font-size:smaller;">Feel free to get in touch with me using the form below:</p> 
 <form action="">
-    <label for="f1">Name:</label>
-    <input id="f1" type="text">
-    <br>
-    <label for="f2">Email:</label>
-    <input type="email" id="f2">
-    <br>
-    <label for="">Choose Your Gender:</label>
-    <input name="same" type="radio">
-    <label for="">Male</label>
-    <input name="same" type="radio">
-    <label for="">Female</label>
-    <br>
-    <label for="">Choose Your Interests:</label>
-    <input type="checkbox">
-    <label for="">Coding</label>
-    <input type="checkbox">
-    <label for="">Reading</label>
-    <br>
-    <label for="bio">Bio (upto 200 characters):</label>
-    <br>
-    <textarea id="bio" rows="8" cols="38" placeholder="type something here"></textarea>
-    <br>
+    <div>
+        <label for="f1">Name:</label>
+        <input id="f1" type="text">
+    </div>
+    
+    <div>
+        <label for="f2">Email:</label>
+        <input type="email" id="f2">
+    </div>
+    
+    <div>
+        <label for="">Choose Your Gender:</label>
+        <input name="same" type="radio">
+        <label for="">Male</label>
+        <input name="same" type="radio">
+        <label for="">Female</label>
+    </div>
+
+    <div>
+
+        <label for="">Choose Your Interests:</label>
+        <input type="checkbox">
+        <label for="">Coding</label>
+        <input type="checkbox">
+        <label for="">Reading</label>
+    </div>
+
+    <div>
+        <label for="bio">Bio (upto 200 characters):</label>
+        <br>
+        <textarea id="bio" rows="8" cols="38" placeholder="type something here"></textarea>
+    </div>
+
     <button class="submit" type="submit">Submit</button> 
     <button class="submit" type="reset">Reset</button>
 </form>
 </section>
 </main>
-<button class="fixedbutton">Top</button>
+<a href="">
+    <button class="fixedbutton">Top</button>
+</a>
 <footer> 
 <br>
 <label>© 2025 My Portfolio</label>
