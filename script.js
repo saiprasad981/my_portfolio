@@ -1,148 +1,103 @@
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const navAnchors = document.querySelectorAll(".nav-links a");
 const topBtn = document.getElementById("topBtn");
-const revealItems = document.querySelectorAll(".reveal");
-const sections = document.querySelectorAll("main section");
+const revealItems = document.querySelectorAll(".reveal-up");
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
-const projectCards = document.querySelectorAll(".project-card");
 const profilePhoto = document.querySelector(".profile-photo");
+const portfolioNav = document.querySelector(".portfolio-nav");
+const navbarMenu = document.getElementById("navbarMenu");
+const navToggle = document.querySelector(".navbar-toggler");
+const navLinks = document.querySelectorAll("#navbarMenu .nav-link");
 
 if (profilePhoto) {
-    profilePhoto.addEventListener("error", () => {
-        profilePhoto.src =
-            "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><rect width='100%25' height='100%25' fill='%23073e89'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='56' font-weight='700' fill='%23ffffff'>SP</text></svg>";
-    });
+  profilePhoto.addEventListener("error", () => {
+    profilePhoto.src =
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><rect width='100%25' height='100%25' rx='28' fill='%23073e89'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='82' font-weight='700' fill='%23ffffff'>SP</text></svg>";
+  });
 }
 
-revealItems.forEach((item, index) => {
-    const delay = Math.min(index * 90, 420);
-    item.style.animationDelay = `${delay}ms`;
-});
+function updateNavState() {
+  if (!portfolioNav) {
+    return;
+  }
 
-function toggleMenu() {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.classList.toggle("active", isOpen);
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  portfolioNav.classList.toggle("is-scrolled", window.scrollY > 20);
 }
 
-if (menuToggle) {
-    menuToggle.addEventListener("click", toggleMenu);
+function updateTopButton() {
+  if (!topBtn) {
+    return;
+  }
+
+  topBtn.classList.toggle("show", window.scrollY > 320);
 }
-
-navAnchors.forEach((anchor) => {
-    anchor.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-    });
-});
-
-function handleScrollButton() {
-    if (window.scrollY > 280) {
-        topBtn.classList.add("show");
-    } else {
-        topBtn.classList.remove("show");
-    }
-}
-
-window.addEventListener("scroll", handleScrollButton);
 
 if (topBtn) {
-    topBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
-const sectionObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-                return;
-            }
-
-            const id = entry.target.getAttribute("id");
-            navAnchors.forEach((link) => {
-                const active = link.getAttribute("href") === `#${id}`;
-                link.classList.toggle("active", active);
-            });
-        });
-    },
-    { threshold: 0.55 }
-);
-
-sections.forEach((section) => sectionObserver.observe(section));
-
 const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    },
-    { threshold: 0.18 }
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.16,
+    rootMargin: "0px 0px -40px 0px",
+  },
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-if (contactForm) {
-    contactForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
+    if (!contactForm.checkValidity()) {
+      contactForm.classList.add("was-validated");
+      formStatus.textContent = "Please complete all required fields correctly.";
+      formStatus.className = "form-status is-error mb-0";
+      return;
+    }
 
-        if (!name || !email || !message) {
-            formStatus.textContent = "Please fill all fields.";
-            formStatus.style.color = "#c61b2a";
-            return;
-        }
-
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            formStatus.textContent = "Please enter a valid email address.";
-            formStatus.style.color = "#c61b2a";
-            return;
-        }
-
-        formStatus.textContent = "Message sent successfully. I will get back to you soon.";
-        formStatus.style.color = "#0a7b60";
-        contactForm.reset();
-    });
+    contactForm.classList.add("was-validated");
+    formStatus.textContent =
+      "Message ready. You can connect with Sai Prasad using the contact links above.";
+    formStatus.className = "form-status is-success mb-0";
+    contactForm.reset();
+    contactForm.classList.remove("was-validated");
+  });
 }
 
-projectCards.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-        if (window.matchMedia("(hover: none)").matches) {
-            return;
-        }
-
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const translateX = (x - centerX) / 24;
-        const translateY = (y - centerY) / 24;
-
-        card.style.transform = `translate(${translateX}px, ${translateY}px) scale(1.02)`;
-    });
-
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "";
-    });
-});
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-        navLinks.classList.remove("open");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!navbarMenu || !navbarMenu.classList.contains("show")) {
+      return;
     }
+
+    const collapseInstance =
+      window.bootstrap && window.bootstrap.Collapse
+        ? window.bootstrap.Collapse.getOrCreateInstance(navbarMenu)
+        : null;
+
+    collapseInstance?.hide();
+    navToggle?.setAttribute("aria-expanded", "false");
+  });
 });
 
-handleScrollButton();
+window.addEventListener("scroll", () => {
+  updateNavState();
+  updateTopButton();
+});
+
+window.addEventListener("load", () => {
+  updateNavState();
+  updateTopButton();
+});
