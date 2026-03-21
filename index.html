@@ -1,218 +1,601 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sai Prasad | Full Stack MERN Developer</title>
-    <meta name="description" content="Portfolio of Sai Prasad, Full Stack MERN Developer. Projects include Weather App, Share Byte, Random Color Generator, and Books Hub Community.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header id="home" class="hero-header">
-        <nav class="navbar">
-            <a href="#home" class="logo">Sai Prasad</a>
+    <meta
+      name="description"
+      content="Sai Prasad is a Full Stack MERN Developer building responsive interfaces, scalable APIs, and recruiter-friendly portfolio projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+    <div class="site-shell">
+      <nav
+        id="mainNav"
+        class="navbar navbar-expand-lg fixed-top navbar-dark portfolio-nav"
+      >
+        <div class="container">
+          <a class="navbar-brand brand-mark" href="#home">Sai Prasad</a>
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-
-        <div class="hero container">
-            <div class="hero-text-block reveal">
-                <p class="hero-kicker">Full Stack Developer</p>
-                <h1>Building fast, scalable web apps with the <span>MERN Stack</span></h1>
-                <p>
-                    I am Sai Prasad, a CSE student focused on production-ready frontend and backend systems.
-                    I design responsive interfaces and reliable APIs that deliver smooth user experiences.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Hire Me</a>
-                </div>
-            </div>
-
-            <aside class="hero-card reveal" aria-label="Quick profile summary">
-                <div class="profile-block">
-                    <img src="saiprasad.png" alt="Sai Prasad profile photo" class="profile-photo">
-                    <div>
-                        <h3 class="profile-name">Sai Prasad</h3>
-                        <p class="profile-role">Full Stack MERN Developer</p>
-                    </div>
-                </div>
-                <h2>Quick Profile</h2>
-                <ul>
-                    <li><strong>Role:</strong> Full Stack MERN Developer</li>
-                    <li><strong>Email:</strong> vallabhunisaiprasad5@gmail.com</li>
-                    <li><strong>Coding:</strong> 30+ HackerRank problems solved in Python</li>
-                    <li><strong>Status:</strong> Open to internships and full-time roles</li>
-                </ul>
-            </aside>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#achievements">Achievements</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+              <li class="nav-item ms-lg-2">
+                <a class="btn btn-warning nav-cta" href="#contact">Hire Me</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
+      </nav>
 
-    <main>
-        <section id="about" class="section">
-            <div class="container about-grid reveal">
-                <div class="about-panel">
-                    <h2>About Me</h2>
-                    <p>
-                        I build clean, responsive, and interactive web products using MongoDB, Express.js, React, and Node.js.
-                        My focus is creating user-first interfaces, API-driven architecture, and maintainable code.
+      <header id="home" class="hero-section overflow-hidden">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="container position-relative">
+          <div class="row align-items-center g-4 g-xl-5 min-vh-100 hero-row py-5">
+            <div class="col-lg-7">
+              <div class="reveal-up">
+                <span class="hero-chip mb-3">
+                  <i class="bi bi-stars"></i>
+                  Full Stack Developer
+                </span>
+                <h1 class="hero-title">
+                  Building fast, scalable web apps with the
+                  <span>MERN Stack</span>
+                </h1>
+                <p class="hero-text">
+                  I am Sai Prasad, a CSE student focused on production-ready
+                  frontend and backend systems. I design responsive interfaces,
+                  reliable APIs, and smooth user experiences that feel polished
+                  on every device.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                  <a href="#projects" class="btn btn-warning btn-lg px-4">
+                    View My Work
+                  </a>
+                  <a href="#contact" class="btn btn-outline-light btn-lg px-4">
+                    Contact Me
+                  </a>
+                </div>
+                <div class="row g-3 mt-4">
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="metric-card">
+                      <strong>30+</strong>
+                      <span>HackerRank problems solved in Python</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="metric-card">
+                      <strong>MERN</strong>
+                      <span>Frontend, backend, API, and database focus</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="metric-card">
+                      <strong>Open</strong>
+                      <span>Available for internships and full-time roles</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="hero-panel reveal-up reveal-delay-2">
+                <div class="profile-stack">
+                  <img
+                    src="saiprasad.png"
+                    alt="Sai Prasad profile photo"
+                    class="profile-photo"
+                  />
+                  <div>
+                    <p class="eyebrow mb-1">Sai Prasad</p>
+                    <h2 class="h4 mb-1 text-white">Full Stack MERN Developer</h2>
+                    <p class="profile-note mb-0">
+                      CSE student building recruiter-ready web products
                     </p>
+                  </div>
+                </div>
+
+                <div class="quick-grid mt-4">
+                  <div class="quick-card">
+                    <span>Role</span>
+                    <strong>Full Stack MERN Developer</strong>
+                  </div>
+                  <div class="quick-card">
+                    <span>Email</span>
+                    <strong class="small">
+                      <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=vallabhunisaiprasad5@gmail.com&su=Hiring%20Opportunity%20for%20Sai%20Prasad"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="email-inline-link"
+                        >vallabhunisaiprasad5@gmail.com</a
+                      >
+                    </strong>
+                  </div>
+                  <div class="quick-card">
+                    <span>Coding</span>
+                    <strong>30+ problems solved in Python</strong>
+                  </div>
+                  <div class="quick-card">
+                    <span>Status</span>
+                    <strong>Open to internships and full-time roles</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 mt-4">
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=vallabhunisaiprasad5@gmail.com&su=Hiring%20Opportunity%20for%20Sai%20Prasad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-light btn-sm"
+                    >Email Me</a
+                  >
+                  <a
+                    href="https://github.com/saiprasad981"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-light btn-sm"
+                    >GitHub</a
+                  >
+                  <a
+                    href="http://www.linkedin.com/in/sai-prasad-0026b8357"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-light btn-sm"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="about" class="section-space">
+          <div class="container">
+            <div class="section-heading text-center reveal-up">
+              <span class="section-label">About</span>
+              <h2>Building clean products with a strong engineering mindset</h2>
+              <p>
+                I focus on practical frontend and backend work that helps teams
+                ship responsive interfaces, maintainable APIs, and scalable data
+                flows.
+              </p>
+            </div>
+
+            <div class="row g-4 mt-1">
+              <div class="col-lg-5">
+                <article class="glass-card h-100 reveal-up reveal-delay-1">
+                  <h3 class="card-title">About Me</h3>
+                  <p>
+                    I build clean, responsive, and interactive web products using
+                    MongoDB, Express.js, React, and Node.js. My focus is creating
+                    user-first interfaces, API-driven architecture, and
+                    maintainable code.
+                  </p>
+                  <p class="mb-0">
+                    I continuously improve through project-based learning and
+                    problem solving with Python and JavaScript.
+                  </p>
+                </article>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <article class="feature-card h-100 reveal-up reveal-delay-2">
+                      <div class="feature-icon"><i class="bi bi-window"></i></div>
+                      <h3>Frontend</h3>
+                      <p>
+                        Responsive UI, component architecture, DOM interactions,
+                        accessibility, and smooth user journeys.
+                      </p>
+                    </article>
+                  </div>
+                  <div class="col-md-6">
+                    <article class="feature-card h-100 reveal-up reveal-delay-3">
+                      <div class="feature-icon"><i class="bi bi-hdd-network"></i></div>
+                      <h3>Backend</h3>
+                      <p>
+                        REST APIs, Node.js, Express.js, business logic, and clean
+                        server-side structure.
+                      </p>
+                    </article>
+                  </div>
+                  <div class="col-md-6">
+                    <article class="feature-card h-100 reveal-up reveal-delay-2">
+                      <div class="feature-icon"><i class="bi bi-database"></i></div>
+                      <h3>Database</h3>
+                      <p>
+                        MongoDB and SQL foundations for reliable, scalable data
+                        handling and future growth.
+                      </p>
+                    </article>
+                  </div>
+                  <div class="col-md-6">
+                    <article class="feature-card h-100 reveal-up reveal-delay-3">
+                      <div class="feature-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                      </div>
+                      <h3>Delivery</h3>
+                      <p>
+                        Recruiter-friendly portfolio work shaped by consistent
+                        learning, practical builds, and clear presentation.
+                      </p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="section-space section-soft">
+          <div class="container">
+            <div class="section-heading text-center reveal-up">
+              <span class="section-label">Skills</span>
+              <h2>Core tools I use to design and develop full stack products</h2>
+              <p>
+                A balanced skill set across UI, APIs, databases, and developer
+                workflow.
+              </p>
+            </div>
+
+            <div class="skills-wrap reveal-up reveal-delay-2">
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Git</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section-space">
+          <div class="container">
+            <div class="section-heading text-center reveal-up">
+              <span class="section-label">Projects</span>
+              <h2>Featured work that shows practical problem solving</h2>
+              <p>
+                Each project highlights responsive UI, JavaScript logic, or full
+                stack product thinking.
+              </p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-6 col-xl-4">
+                <article class="project-card reveal-up reveal-delay-1 h-100">
+                  <div class="project-gradient">
+                    <span class="project-badge">Realtime UI</span>
+                    <h3>Weather App</h3>
+                  </div>
+                  <div class="project-body">
                     <p>
-                        I continuously improve through project-based learning and problem solving with Python and JavaScript.
+                      Real-time weather details with search-based city lookup and
+                      responsive result UI.
                     </p>
-                </div>
-                <div class="about-points">
-                    <div class="point-card">
-                        <h3>Frontend</h3>
-                        <p>Responsive UI, component architecture, DOM interactions, accessibility.</p>
-                    </div>
-                    <div class="point-card">
-                        <h3>Backend</h3>
-                        <p>REST APIs, Node.js, Express.js, data modeling, business logic.</p>
-                    </div>
-                    <div class="point-card">
-                        <h3>Database</h3>
-                        <p>MongoDB and SQL foundations for scalable data handling.</p>
-                    </div>
-                </div>
+                    <a
+                      class="btn btn-primary"
+                      href="https://weather-app-dctm.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View Live Project</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <article class="project-card reveal-up reveal-delay-2 h-100">
+                  <div class="project-gradient gradient-green">
+                    <span class="project-badge">Social Impact</span>
+                    <h3>Food Save Connect</h3>
+                  </div>
+                  <div class="project-body">
+                    <p>
+                      A food donation platform concept connecting donors and
+                      receivers through a simple, user-first experience.
+                    </p>
+                    <a
+                      class="btn btn-primary"
+                      href="https://saiprasad981.github.io/FOOD_DONATION/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View Live Project</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <article class="project-card reveal-up reveal-delay-3 h-100">
+                  <div class="project-gradient gradient-orange">
+                    <span class="project-badge">Productivity</span>
+                    <h3>To-Do List</h3>
+                  </div>
+                  <div class="project-body">
+                    <p>
+                      Task management app to add, complete, and organize daily
+                      activities with responsive UI flow.
+                    </p>
+                    <a
+                      class="btn btn-primary"
+                      href="https://saiprasad981.github.io/To-do-list-/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View Live Project</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <article class="project-card reveal-up reveal-delay-1 h-100">
+                  <div class="project-gradient gradient-pink">
+                    <span class="project-badge">JavaScript DOM</span>
+                    <h3>Random Color Generator</h3>
+                  </div>
+                  <div class="project-body">
+                    <p>
+                      Interactive utility that generates random palettes using
+                      JavaScript DOM logic and instant visual feedback.
+                    </p>
+                    <a
+                      class="btn btn-primary"
+                      href="https://saiprasad981.github.io/Random-Color-Generator/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View Live Project</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <article class="project-card reveal-up reveal-delay-2 h-100">
+                  <div class="project-gradient gradient-violet">
+                    <span class="project-badge">Community Platform</span>
+                    <h3>Books Club Community</h3>
+                  </div>
+                  <div class="project-body">
+                    <p>
+                      Community-driven concept for browsing and discussing books
+                      with scalable architecture and engagement flow.
+                    </p>
+                    <a
+                      class="btn btn-primary"
+                      href="https://saiprasad981.github.io/Books_club_community/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >View Live Project</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-xl-4">
+                <article class="project-card recruiter-card reveal-up reveal-delay-3 h-100">
+                  <div class="project-body">
+                    <span class="section-label mb-2 d-inline-block">Why Recruiters Notice</span>
+                    <h3 class="text-dark">Practical, polished, and growth-focused</h3>
+                    <p>
+                      My portfolio work reflects strong foundations in responsive
+                      design, clean structure, and real-world web development
+                      thinking across the stack.
+                    </p>
+                    <a href="#contact" class="btn btn-warning">Let’s Connect</a>
+                  </div>
+                </article>
+              </div>
             </div>
+          </div>
         </section>
 
-        <section id="skills" class="section section-alt">
-            <div class="container reveal">
-                <h2>Core Skills</h2>
-                <div class="skills">
-                    <span>MongoDB</span>
-                    <span>Express.js</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>JavaScript</span>
-                    <span>Python</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>SQL</span>
-                    <span>Git</span>
-                </div>
+        <section id="achievements" class="section-space section-soft">
+          <div class="container">
+            <div class="section-heading text-center reveal-up">
+              <span class="section-label">Achievements</span>
+              <h2>Consistency, learning, and hands-on execution</h2>
+              <p>
+                A snapshot of progress through coding practice and project work.
+              </p>
             </div>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <article class="achievement-card reveal-up reveal-delay-1 h-100">
+                  <div class="achievement-icon">
+                    <i class="bi bi-trophy-fill"></i>
+                  </div>
+                  <h3>Problem Solving</h3>
+                  <p>
+                    Solved 30+ HackerRank problems in Python with focus on logic,
+                    optimization, and problem breakdown.
+                  </p>
+                </article>
+              </div>
+              <div class="col-md-6">
+                <article class="achievement-card reveal-up reveal-delay-2 h-100">
+                  <div class="achievement-icon">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                  </div>
+                  <h3>Full Stack Projects</h3>
+                  <p>
+                    Built and deployed practical projects across UI design, APIs,
+                    dynamic interactions, and responsive layouts.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section id="projects" class="section">
-            <div class="container reveal">
-                <h2>Featured Projects</h2>
-                <div class="projects">
-                    <article class="project-card" tabindex="0">
-                        <h3>Weather App</h3>
-                        <p>Real-time weather details with search-based city lookup and responsive result UI.</p>
-                        <a class="project-link" href="https://weather-app-dctm.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
-                    </article>
-
-                    <article class="project-card" tabindex="0">
-                        <h3>Food Save Connect</h3>
-                        <p>A food donation platform concept that connects donors and receivers through a simple interface.</p>
-                        <a class="project-link" href="https://saiprasad981.github.io/FOOD_DONATION/" target="_blank" rel="noopener noreferrer">View Live Project</a>
-                    </article>
-
-                    <article class="project-card" tabindex="0">
-                        <h3>To-Do List</h3>
-                        <p>Task management app to add, complete, and organize daily activities with responsive UI flow.</p>
-                        <a class="project-link" href="https://saiprasad981.github.io/To-do-list-/" target="_blank" rel="noopener noreferrer">View Live Project</a>
-                    </article>
-
-                    <article class="project-card" tabindex="0">
-                        <h3>Random Color Generator</h3>
-                        <p>Interactive utility that generates random palettes using JavaScript DOM logic.</p>
-                        <a class="project-link" href="https://saiprasad981.github.io/Random-Color-Generator/" target="_blank" rel="noopener noreferrer">View Live Project</a>
-                    </article>
-
-                    <article class="project-card" tabindex="0">
-                        <h3>Books Club Community</h3>
-                        <p>Community-driven concept for browsing and discussing books with scalable architecture.</p>
-                        <a class="project-link" href="https://saiprasad981.github.io/Books_club_community/" target="_blank" rel="noopener noreferrer">View Live Project</a>
-                    </article>
-                </div>
+        <section id="contact" class="section-space">
+          <div class="container">
+            <div class="section-heading text-center reveal-up">
+              <span class="section-label">Contact</span>
+              <h2>Available for internships and full-time opportunities</h2>
+              <p>
+                If you are hiring for frontend, backend, or full stack roles, I
+                would love to connect.
+              </p>
             </div>
-        </section>
 
-        <section id="achievements" class="section section-alt">
-            <div class="container reveal">
-                <h2>Achievements</h2>
-                <div class="achievements-grid">
-                    <div class="achievement-card">
-                        <h3>Problem Solving</h3>
-                        <p>Solved 30+ HackerRank problems in Python with focus on logic and optimization.</p>
+            <div class="row g-4 align-items-stretch">
+              <div class="col-lg-5">
+                <aside class="contact-panel reveal-up reveal-delay-1 h-100">
+                  <h3 class="card-title text-white">Let’s build something impactful</h3>
+                  <p class="contact-copy">
+                    Reach out through email, GitHub, LinkedIn, or view my live
+                    portfolio. I am actively looking for opportunities to grow and
+                    contribute.
+                  </p>
+
+                  <div class="contact-links-list">
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=vallabhunisaiprasad5@gmail.com&su=Hiring%20Opportunity%20for%20Sai%20Prasad"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact-link"
+                    >
+                      <i class="bi bi-envelope-fill"></i>
+                      <span>vallabhunisaiprasad5@gmail.com</span>
+                    </a>
+                    <a
+                      href="http://www.linkedin.com/in/sai-prasad-0026b8357"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact-link"
+                    >
+                      <i class="bi bi-linkedin"></i>
+                      <span>LinkedIn Profile</span>
+                    </a>
+                    <a
+                      href="https://github.com/saiprasad981"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact-link"
+                    >
+                      <i class="bi bi-github"></i>
+                      <span>GitHub Profile</span>
+                    </a>
+                    <a
+                      href="https://saiprasad981.github.io/my_portfolio/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact-link"
+                    >
+                      <i class="bi bi-globe2"></i>
+                      <span>Portfolio Link</span>
+                    </a>
+                  </div>
+                </aside>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="contact-form-card reveal-up reveal-delay-2 h-100">
+                  <form class="row g-3 needs-validation" id="contactForm" novalidate>
+                    <div class="col-md-6">
+                      <label for="name" class="form-label">Your Name</label>
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                      />
+                      <div class="invalid-feedback">Please enter your name.</div>
                     </div>
-                    <div class="achievement-card">
-                        <h3>Full Stack Projects</h3>
-                        <p>Built and deployed practical projects across UI design, APIs, and dynamic interactions.</p>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input
+                        type="email"
+                        class="form-control form-control-lg"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                      <div class="invalid-feedback">Please enter a valid email.</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container reveal">
-                <h2>Contact</h2>
-                <div class="contact-layout">
-                    <div class="contact-links">
-                        <a href="mailto:vallabhunisaiprasad5@gmail.com" class="social-link">
-                            <span class="icon" aria-hidden="true">@</span>
-                            <span>Email: vallabhunisaiprasad5@gmail.com</span>
-                        </a>
-                        <a href="http://www.linkedin.com/in/sai-prasad-0026b8357" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <span class="icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" role="img">
-                                    <path d="M5.4 8.9H2.2V21h3.2V8.9zm.2-3.8a1.9 1.9 0 1 0-3.8 0 1.9 1.9 0 0 0 3.8 0zM21 21v-6.6c0-3.5-1.9-5.1-4.3-5.1-2 0-2.8 1.1-3.3 1.8v-1.5h-3.2V21h3.2v-6.2c0-1.7.3-3.3 2.4-3.3 2.1 0 2.1 2 2.1 3.4V21H21z"></path>
-                                </svg>
-                            </span>
-                            <span>LinkedIn Profile</span>
-                        </a>
-                        <a href="https://github.com/saiprasad981" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <span class="icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" role="img">
-                                    <path d="M12 .6a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.6.1-.6.1-.6 1 .1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 2-1.2-2.7-.3-5.5-1.4-5.5-6A4.7 4.7 0 0 1 3.4 8c-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1a4.7 4.7 0 0 1 1.3 3.3c0 4.6-2.8 5.6-5.5 6 .4.3.8 1 .8 2v3c0 .4.2.7.8.6A12 12 0 0 0 12 .6z"></path>
-                                </svg>
-                            </span>
-                            <span>GitHub Profile</span>
-                        </a>
-                        <a href="https://saiprasad981.github.io/my_portfolio/" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <span class="icon" aria-hidden="true">P</span>
-                            <span>Portfolio Link</span>
-                        </a>
+                    <div class="col-12">
+                      <label for="message" class="form-label">Your Message</label>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="6"
+                        placeholder="Tell me about the role or project"
+                        required
+                      ></textarea>
+                      <div class="invalid-feedback">Please add your message.</div>
                     </div>
-
-                    <form class="contact-form" id="contactForm" novalidate>
-                        <input type="text" id="name" placeholder="Your Name" required>
-                        <input type="email" id="email" placeholder="Your Email" required>
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <p id="formStatus" class="form-status" aria-live="polite"></p>
-                    </form>
+                    <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
+                      <button type="submit" class="btn btn-primary btn-lg px-4">
+                        Send Message
+                      </button>
+                      <p id="formStatus" class="form-status mb-0" aria-live="polite"></p>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
-    </main>
+      </main>
 
-    <button id="topBtn" aria-label="Scroll to top">Top</button>
+      <button id="topBtn" class="top-button" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+      </button>
 
-    <footer>
-        <p>&copy; 2026 Sai Prasad | Full Stack MERN Developer</p>
-    </footer>
+      <footer class="portfolio-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+          <p class="mb-0">&copy; 2026 Sai Prasad | Full Stack MERN Developer</p>
+          <a href="#home" class="footer-link">Back to top</a>
+        </div>
+      </footer>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
